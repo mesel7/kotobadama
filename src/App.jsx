@@ -1,36 +1,27 @@
-import { useState, version } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
 import './App.css'
+import { Route, Routes } from 'react-router-dom';
+import Voca from './pages/Voca';
+import List from './pages/List';
+import New from './pages/New';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDataLoaded, setIsDataLoaded] = useState(true); 
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  if (!isDataLoaded) {
+    return <div>데이터를 불러오는 중이에요</div>;
+  } else {
+    return (
+      <div className="App">
+         <Routes>
+           <Route path="/" />
+           <Route path="/voca" element={<Voca />} />
+           <Route path="/list" element={<List />}/>
+           <Route path="/new" element={<New />}/>
+         </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <small>{version}</small>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+     );
+  }
 }
 
 export default App

@@ -1,0 +1,29 @@
+.list-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #6b97b3;
+}
+
+.list-item .img-wrapper {
+    width: 50%;
+}
+
+.list-item .img-wrapper img {
+    width: 100%;
+}
+
+.list-item .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    color: white;
+    font-size: 16px;
+}
+
+.list-item .content-wrapper .name {
+    font-size: 24px;
+    font-weight: bold;
+}

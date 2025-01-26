@@ -2,9 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./InputField.css";
 import { icons } from "../../utils";
 
-const InputField = () => {
+const InputField = ({ count }) => {
     return (
         <div className="input-field">
+            <div className="count">{count}</div>
             <input type={"text"} />
             <input type={"text"} />
             <input type={"text"} />

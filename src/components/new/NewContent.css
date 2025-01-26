@@ -6,3 +6,14 @@
     box-sizing: border-box;
     overflow-y: auto;
 }
+
+.new-content .input-sample {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.new-content .no-more-fields {
+    color: white;
+    text-align: center;
+}

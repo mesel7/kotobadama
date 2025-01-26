@@ -2,6 +2,12 @@
     display: flex;
     align-items: flex-end;
     gap: 10px;
+    color: white;
+}
+
+.input-field .count {
+    width: calc(10% - 5px);
+    padding: 5px 0;
 }
 
 .input-field input {
@@ -11,7 +17,7 @@
     background: #171717;
     color: white;
     font-size: 16px;
-    padding: 10px 0;
+    padding: 5px;
     border: none;
     border-bottom: 1px solid lightgray;
     border-radius: 0;

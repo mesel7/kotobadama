@@ -1,0 +1,8 @@
+.new-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}

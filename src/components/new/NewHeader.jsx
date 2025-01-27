@@ -4,7 +4,7 @@ import "./NewHeader.css";
 import { icons } from "../../utils";
 import { useNavigate } from "react-router-dom";
 
-const NewHeader = () => {
+const NewHeader = ({ onCreateNewVoca }) => {
     const navigate = useNavigate();
 
     return (

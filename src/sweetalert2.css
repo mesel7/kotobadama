@@ -1,6 +1,7 @@
 .swal2-popup {
     width: 100%;
     max-width: 400px;
+    background: #171717;
 }
 
 .swal2-icon {
@@ -13,10 +14,12 @@
 
 #swal2-title {
     font-size: 24px;
+    color: white;
 }
 
 #swal2-html-container {
     font-size: 16px;
+    color: white;
 }
 
 .swal2-actions {
@@ -30,8 +33,8 @@
 }
 
 .swal2-confirm {
-    background-color: #f6f6f6;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 5px;
     font-weight: bold;
     font-size: 16px;

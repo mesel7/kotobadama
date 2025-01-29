@@ -23,6 +23,18 @@
     font-size: 16px;
 }
 
+.list-item .content-wrapper .name,
+.list-item .content-wrapper .word,
+.list-item .content-wrapper .created-at,
+.list-item .content-wrapper .description {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
 .list-item .content-wrapper .name {
     font-size: 24px;
     font-weight: bold;

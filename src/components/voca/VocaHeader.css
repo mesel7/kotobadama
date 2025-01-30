@@ -1,0 +1,27 @@
+.voca-header {
+    position: sticky;
+    top: 0;
+    background-color: #171717;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-bottom: 1px solid #232323;
+}
+
+.voca-header .header-menu {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.voca-header .display-option {
+    display: flex;
+    justify-content: space-between;
+}
+
+.voca-header .display-option .button {
+    width: 30%;
+}
+

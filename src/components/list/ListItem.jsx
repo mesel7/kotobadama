@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import vocaImg from "../../assets/images/img_voca.png";
 import { formatDate } from "../../utils";
 import "./ListItem.css";
 
-const ListItem = ({ name, wordCount, createdAt, description }) => {
+const ListItem = ({ id, name, wordCount, createdAt, description }) => {
+    const navigate = useNavigate();
+
+    const handleVocaListClick = () => {
+        navigate(`/voca/${id}`);
+    };
+
     return (
-        <div className="list-item">
+        <div className="list-item" onClick={handleVocaListClick}>
             <div className="img-wrapper">
                 <img alt={"VOCA"} src={vocaImg} />
             </div>

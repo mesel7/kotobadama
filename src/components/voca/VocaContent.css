@@ -1,0 +1,52 @@
+.voca-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.voca-content .word-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.voca-content .word-wrapper div {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.voca-content .word-wrapper .word-kana,
+.voca-content .word-wrapper .meaning {
+    font-size: 32px;
+}
+
+.voca-content .word-wrapper .word-kanji {
+    font-size: 64px;
+}
+
+.voca-content .menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.voca-content .menu-wrapper .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.voca-content .menu-wrapper .button-wrapper .button {
+    width: 25%;
+}
+
+

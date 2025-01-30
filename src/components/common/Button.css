@@ -11,3 +11,9 @@
     letter-spacing: 1px;
     white-space: nowrap;
 }
+
+.button-light {
+    background-color: #171717;
+    color: white;
+    border: 1px solid #6b97b3;
+}

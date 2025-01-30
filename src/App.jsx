@@ -17,7 +17,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/" />
-            <Route path="/voca" element={<Voca />} />
+            <Route path="/voca/:id" element={<Voca />} />
             <Route path="/list" element={<List />}/>
             <Route path="/new" element={<New />}/>
           </Routes>

@@ -9,14 +9,14 @@ const mockData = [
         id: 0,
         name: "sample",
         wordCount: 2,
-        createdAt: "25.01.26", // Date 객체가 아닌 단순 문자열
+        createdAt: "25.01.26",
         description: "JLPT",
         words: [
             {
                 wordKanji: "行く",
                 wordKana: "いく",
                 meaning: "가다",
-                status: "known(암기 완료)/partial(부분 암기)/unknown(암기 필요)"
+                status: "known(외움)/partial(반쯤)/unknown(모름)"
             },
             {
                 wordKanji: "心",

@@ -1,8 +1,9 @@
-import { faAngleLeft, faEraser } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faEraser } from "@fortawesome/free-solid-svg-icons";
 
 export const icons = {
     faEraser,
-    faAngleLeft
+    faAngleLeft,
+    faAngleRight
 };
 
 export const formatDate = (isoString) => {

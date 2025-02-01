@@ -47,7 +47,7 @@ const Edit = () => {
                 }
             });
         }
-    }, [id, state]);
+    }, [id]);
 
     const handleUpdateVoca = async () => {
         const result = await Swal.fire({
@@ -67,7 +67,16 @@ const Edit = () => {
         
         if (result.isConfirmed) {
             onUpdate({ ...voca, name, description, words: localWords });
-            navigate(-1);
+            Swal.fire({
+                title: "단어장 수정",
+                text: "단어장이 수정되었습니다",
+                icon: "success",
+                confirmButtonText: "확인",
+                customClass: {
+                    confirmButton: 'no-focus-outline'
+                }
+            });
+            navigate("/list");
         }
     };
 
@@ -89,7 +98,16 @@ const Edit = () => {
         
         if (result.isConfirmed) {
             onDelete({ ...voca });
-            navigate(-1);
+            Swal.fire({
+                title: "단어장 삭제",
+                text: "단어장이 삭제되었습니다",
+                icon: "success",
+                confirmButtonText: "확인",
+                customClass: {
+                    confirmButton: 'no-focus-outline'
+                }
+            });
+            navigate("/list");
         }
     };
     
@@ -106,7 +124,7 @@ const Edit = () => {
                     onUpdateVoca={handleUpdateVoca}
                     onDeleteVoca={handleDeleteVoca}
                 />
-                <EditContent />
+                <EditContent localWords={localWords} setLocalWords={setLocalWords} />
             </div>
         );
     }

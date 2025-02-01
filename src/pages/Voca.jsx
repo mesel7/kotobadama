@@ -51,7 +51,7 @@ const Voca = () => {
                 }
             });
         }
-    }, [id, state]);
+    }, [id]);
 
     // VocaHeader에 전달되어 버튼(한자, 가나, 뜻) 클릭을 통해 displayOption의 상태를 변경
     const handleDisplayOption = (field) => {

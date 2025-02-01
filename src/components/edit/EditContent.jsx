@@ -1,6 +1,6 @@
 import "./EditContent.css";
 
-const EditContent = () => {
+const EditContent = ({ localWords, setLocalWords }) => {
     return (
         <div className="edit-content"></div>
     );

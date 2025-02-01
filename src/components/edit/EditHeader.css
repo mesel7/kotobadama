@@ -1,0 +1,57 @@
+.edit-header {
+    position: sticky;
+    top: 0;
+    background-color: #171717;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-bottom: 1px solid #232323;
+}
+
+.edit-header .header-menu {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.edit-header .header-menu .header-title {
+    flex-grow: 1;
+    color: white;
+    text-align: center;
+}
+
+.edit-header .name-wrapper,
+.edit-header .description-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.edit-header input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(80% - 5px);
+    background: #171717;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0;
+}
+
+.edit-header input:focus {
+    outline: none;
+}
+
+.edit-header .button-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-header .button-wrapper .button {
+    width: 50%;
+}

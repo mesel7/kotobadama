@@ -5,6 +5,7 @@ import Voca from './pages/Voca';
 import List from './pages/List';
 import New from './pages/New';
 import { VocaProvider } from './contexts/VocaContext';
+import Edit from './pages/Edit';
 
 function App() {
   const [isDataLoaded, setIsDataLoaded] = useState(true); 

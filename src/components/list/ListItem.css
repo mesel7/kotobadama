@@ -1,12 +1,11 @@
 .list-item {
-    cursor: pointer;
     display: flex;
-    align-items: center;
     border-radius: 5px;
     box-shadow: 1px 1px 5px 1px #6b97b3;
 }
 
 .list-item .img-wrapper {
+    cursor: pointer;
     width: 50%;
 }
 
@@ -15,12 +14,20 @@
 }
 
 .list-item .content-wrapper {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     flex-grow: 1;
     color: white;
     font-size: 16px;
+    padding: 18px 0;
+}
+
+.list-item .menu-wrapper {
+    font-size: 24px;
+    color: white;
+    padding: 15px;
 }
 
 .list-item .content-wrapper .name,

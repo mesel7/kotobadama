@@ -18,8 +18,9 @@ function App() {
           <Routes>
             <Route path="/" />
             <Route path="/voca/:id" element={<Voca />} />
-            <Route path="/list" element={<List />}/>
-            <Route path="/new" element={<New />}/>
+            <Route path="/list" element={<List />} />
+            <Route path="/new" element={<New />} />
+            <Route path="/edit/:id" element={<Edit />} />
           </Routes>
         </div>
       </VocaProvider>

@@ -11,6 +11,7 @@ const mockData = [
         wordCount: 2,
         createdAt: "25.01.26",
         description: "JLPT",
+        currentIdx: 0,
         words: [
             {
                 wordKanji: "行く",

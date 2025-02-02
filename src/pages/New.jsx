@@ -50,6 +50,7 @@ const New = () => {
             wordCount: validWords.length,
             createdAt: new Date().toISOString(),
             description,
+            currentIdx: 0,
             words: validWords
         };
         onCreate(newVoca);

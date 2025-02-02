@@ -3,7 +3,7 @@ import Button from "../common/Button";
 import "./VocaHeader.css";
 import { icons } from "../../utils";
 
-const VocaHeader = ({ vocaName, displayOption, onClickDisplayOption, onSaveAndExit }) => {
+const VocaHeader = ({ vocaName, currentIdx, wordCount, displayOption, onClickDisplayOption, onSaveAndExit }) => {
     return (
         <div className="voca-header">
             <div className="header-menu">
@@ -13,7 +13,7 @@ const VocaHeader = ({ vocaName, displayOption, onClickDisplayOption, onSaveAndEx
                     onClick={onSaveAndExit}
                 />
                 <div className="header-title">{vocaName}</div>
-                <div className="current-word">125/200</div>
+                <div className="current-word">{`${currentIdx + 1} / ${wordCount}`}</div>
             </div>
             <div className="display-option">
                 <Button

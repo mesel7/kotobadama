@@ -22,6 +22,9 @@ const Voca = () => {
     // 개별 단어 페이지에서 한자, 가나, 뜻의 표시 여부를 관리
     const [displayOption, setDisplayOption] = useState({});
 
+    // 현재 보고 있는 단어의 인덱스 번호를 관리
+    const [currentIdx, setCurrentIdx] = useState(0);
+
     useEffect(() => {
         if (state.length === 0) {
             return;
@@ -36,6 +39,7 @@ const Voca = () => {
                 wordKana: true,
                 meaning: false
             });
+            setCurrentIdx(vocaData.currentIdx);
             setIsDataLoaded(true);
         } else {
             Swal.fire({
@@ -89,7 +93,7 @@ const Voca = () => {
         });
 
         if (result.isConfirmed) {
-            onUpdate({ ...voca, words: localWords });
+            onUpdate({ ...voca, currentIdx, words: localWords });
             navigate(-1);
         }
     };
@@ -101,6 +105,8 @@ const Voca = () => {
             <div className="voca">
                 <VocaHeader
                     vocaName={voca.name}
+                    currentIdx={currentIdx}
+                    wordCount={voca.wordCount}
                     displayOption={displayOption}
                     onClickDisplayOption={handleDisplayOption}
                     onSaveAndExit={handleSaveAndExit}
@@ -108,6 +114,8 @@ const Voca = () => {
                 <VocaContent
                     words={localWords}
                     wordCount={voca.wordCount}
+                    currentIdx={currentIdx}
+                    onChangeIdx={setCurrentIdx}
                     displayOption={displayOption}
                     onStatusChange={handleStatusChange}
                 />

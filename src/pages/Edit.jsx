@@ -88,6 +88,7 @@ const Edit = () => {
                 name,
                 wordCount: validWords.length,
                 description,
+                currentIdx: 0,
                 words: validWords
             });
             Swal.fire({

@@ -31,7 +31,7 @@ const Edit = () => {
             setVoca(vocaData);
             setName(vocaData.name);
             setDescription(vocaData.description);
-            setLocalWords(vocaData.words);
+            setLocalWords(vocaData.words.map(it => ({ ...it }))); 
             setIsDataLoaded(true);
         } else {
             Swal.fire({
@@ -66,7 +66,30 @@ const Edit = () => {
         });
         
         if (result.isConfirmed) {
-            onUpdate({ ...voca, name, description, words: localWords });
+            const validWords = localWords.filter(
+                (it) => it && (it.wordKanji?.trim() || it.wordKana?.trim() || it.meaning?.trim())
+            );
+                    
+            if (validWords.length <= 0) {
+                Swal.fire({
+                    title: "단어 입력",
+                    text: "단어를 1개 이상 입력해주세요",
+                    icon: "warning",
+                    confirmButtonText: "확인",
+                    customClass: {
+                        confirmButton: 'no-focus-outline'
+                    }
+                });
+                return;
+            }
+
+            onUpdate({
+                ...voca,
+                name,
+                wordCount: validWords.length,
+                description,
+                words: validWords
+            });
             Swal.fire({
                 title: "단어장 수정",
                 text: "단어장이 수정되었습니다",
@@ -76,6 +99,7 @@ const Edit = () => {
                     confirmButton: 'no-focus-outline'
                 }
             });
+
             navigate("/list");
         }
     };
@@ -107,6 +131,7 @@ const Edit = () => {
                     confirmButton: 'no-focus-outline'
                 }
             });
+
             navigate("/list");
         }
     };

@@ -1,0 +1,19 @@
+.edit-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.edit-content .input-sample {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.edit-content .no-more-fields {
+    color: white;
+    text-align: center;
+}

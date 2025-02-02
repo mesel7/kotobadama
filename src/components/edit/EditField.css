@@ -1,0 +1,28 @@
+.edit-field {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    color: white;
+}
+
+.edit-field .count {
+    width: calc(10% - 5px);
+    padding: 5px 0;
+}
+
+.edit-field input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(30% - 5px);
+    background: #171717;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0;
+}
+
+.edit-field input:focus {
+    outline: none;
+}

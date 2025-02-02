@@ -3,7 +3,6 @@ import "./InputField.css";
 import { icons } from "../../utils";
 
 const InputField = ({ count, data, onChange }) => {
-
     return (
         <div className="input-field">
             <div className="count">{count}</div>

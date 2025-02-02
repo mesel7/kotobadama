@@ -24,6 +24,30 @@
     padding: 18px 0;
 }
 
+.list-item .content-wrapper .progress-bar-container {
+    display: flex;
+    height: 5%;
+    width: 100%;
+    background-color: black;
+}
+
+.list-item .content-wrapper .progress-bar-container .progress-bar {
+    display: flex;
+    width: 100%;
+}
+
+.list-item .content-wrapper .progress-bar-container .progress-bar .progress-known {
+    background-color: #2196f3;
+}
+
+.list-item .content-wrapper .progress-bar-container .progress-bar .progress-partial {
+    background-color: #607d8b;
+}
+
+.list-item .content-wrapper .progress-bar-container .progress-bar .progress-unknown {
+    background-color: black;
+}
+
 .list-item .menu-wrapper {
     font-size: 24px;
     color: white;
@@ -31,7 +55,7 @@
 }
 
 .list-item .content-wrapper .name,
-.list-item .content-wrapper .word,
+.list-item .content-wrapper .word-status,
 .list-item .content-wrapper .created-at,
 .list-item .content-wrapper .description {
     -webkit-line-clamp: 1;

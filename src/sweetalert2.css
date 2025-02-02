@@ -33,6 +33,7 @@
 }
 
 .swal2-confirm {
+    font-family: "Nanum Gothic", "Noto Sans JP", serif;
     background-color: black;
     color: white;
     border-radius: 5px;
@@ -43,6 +44,7 @@
 }
 
 .swal2-cancel {
+    font-family: "Nanum Gothic", "Noto Sans JP", serif;
     background-color: white;
     color: black;
     border: 1px solid #ececec;

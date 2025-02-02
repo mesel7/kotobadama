@@ -11,6 +11,8 @@
 }
 
 .edit-field input {
+    font-family: "Nanum Gothic", "Noto Sans JP", serif;
+    font-weight: 300;
     display: inline-block;
     box-sizing: border-box;
     width: calc(30% - 5px);
@@ -19,7 +21,7 @@
     font-size: 16px;
     padding: 5px;
     border: none;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #343434;
     border-radius: 0;
 }
 

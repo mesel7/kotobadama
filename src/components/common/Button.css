@@ -1,4 +1,6 @@
 .button {
+    font-family: "Nanum Gothic", "Noto Sans JP", serif;
+    font-weight: bold;
     outline: none;
     cursor: pointer;
     padding: 10px;
@@ -7,7 +9,6 @@
     background-color: #6b97b3;
     color: white;
     font-size: 16px;
-    font-weight: bold;
     letter-spacing: 1px;
     white-space: nowrap;
 }

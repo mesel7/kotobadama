@@ -10,6 +10,7 @@
 .edit-content .input-sample {
     display: flex;
     color: white;
+    align-items: center;
     justify-content: space-evenly;
 }
 

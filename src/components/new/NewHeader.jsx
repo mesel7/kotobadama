@@ -51,7 +51,6 @@ const NewHeader = ({ name, description, onNameChange, onDescriptionChange, onCre
             </div>
             <div className="button-wrapper">
                 <Button text={"저장"} onClick={onCreateNewVoca}/>
-                <Button text={"삭제"} />
             </div>
         </div>
     );

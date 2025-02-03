@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Voca from './pages/Voca';
 import List from './pages/List';
 import New from './pages/New';
@@ -17,7 +17,7 @@ function App() {
       <VocaProvider>
         <div className="App">
           <Routes>
-            <Route path="/" />
+            <Route path="/" element={<Navigate to="/list" />} />
             <Route path="/voca/:id" element={<Voca />} />
             <Route path="/list" element={<List />} />
             <Route path="/new" element={<New />} />

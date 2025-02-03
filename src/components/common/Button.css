@@ -18,3 +18,10 @@
     color: white;
     border: 1px solid #6b97b3;
 }
+
+@media (max-width: 420px) {
+    .button {
+        padding: 2.4vw;
+        font-size: 3.8vw;
+    }
+}

@@ -72,19 +72,19 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
             <div className="word-wrapper">
                 <div
                     className="word-kana"
-                    style={{ visibility: displayOption.wordKana ? "visible" : "hidden"}}
+                    style={{ opacity: displayOption.wordKana ? 1 : 0 }}
                 >
                     {words[currentIdx].wordKana}
                 </div>
                 <div
                     className="word-kanji"
-                    style={{ visibility: displayOption.wordKanji ? "visible" : "hidden"}}
+                    style={{ opacity: displayOption.wordKanji ? 1 : 0 }}
                 >
                     {words[currentIdx].wordKanji}
                 </div>
                 <div
                     className="meaning"
-                    style={{ visibility: displayOption.meaning ? "visible" : "hidden"}}
+                    style={{ opacity: displayOption.meaning ? 1 : 0 }}
                 >
                     {words[currentIdx].meaning}
                 </div>
@@ -92,7 +92,7 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
             <div className="menu-wrapper">
                 <FontAwesomeIcon
                     icon={icons.faAngleLeft}
-                    style={{ color: "white", cursor: "pointer" }}
+                    style={{ color: "white", cursor: "pointer", padding: "15px", paddingLeft: "0px" }}
                     onClick={handlePrevClick}
                 />
                 <div className="button-wrapper">
@@ -114,7 +114,7 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
                 </div>
                 <FontAwesomeIcon
                     icon={icons.faAngleRight}
-                    style={{ color: "white", cursor: "pointer" }}
+                    style={{ color: "white", cursor: "pointer", padding: "15px", paddingRight: "0px" }}
                     onClick={handleNextClick}
                 />
             </div>

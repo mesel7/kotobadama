@@ -26,10 +26,14 @@
 .voca-content .word-wrapper .word-kana,
 .voca-content .word-wrapper .meaning {
     font-size: 32px;
+    height: 48px;
+    line-height: 48px;
 }
 
 .voca-content .word-wrapper .word-kanji {
     font-size: 64px;
+    height: 96px;
+    line-height: 96px;
 }
 
 .voca-content .menu-wrapper {
@@ -46,7 +50,7 @@
 }
 
 .voca-content .menu-wrapper .button-wrapper .button {
-    width: 25%;
+    width: 30%;
 }
 
 

@@ -9,7 +9,7 @@ const mockData = [
         id: 0,
         name: "sample",
         wordCount: 2,
-        createdAt: "25.01.26",
+        createdAt: "25.02.09",
         description: "JLPT",
         currentIdx: 0,
         words: [

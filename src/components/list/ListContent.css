@@ -6,3 +6,10 @@
     box-sizing: border-box;
     overflow-y: auto;
 }
+
+@media (max-width: 420px) {
+    .list-content {
+        padding: 7.1vw;
+        gap: 7.1vw;
+    }
+}

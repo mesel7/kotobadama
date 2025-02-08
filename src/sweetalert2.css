@@ -48,6 +48,7 @@
     background: #171717;
     color: #b3e0fc;
     outline: 1px solid #b3e0fc;
+    outline-offset: -1px;
     border-radius: 9999px;
     font-weight: bold;
     font-size: 16px;

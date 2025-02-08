@@ -16,6 +16,7 @@
     background: #171717;
     color: #b3e0fc;
     outline: 1px solid #b3e0fc;
+    outline-offset: -1px;
 }
 
 .button:hover {
@@ -24,7 +25,6 @@
 
 .button-light:hover {
     background: #1e1e1e;
-    outline: 1px solid #b3e0fc;
 }
 
 @media (max-width: 420px) {

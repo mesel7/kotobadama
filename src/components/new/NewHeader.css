@@ -12,13 +12,16 @@
 
 .new-header .header-menu {
     display: flex;
+    align-items: center;
     padding-bottom: 20px;
+    font-size: 16px;
 }
 
 .new-header .header-menu .header-title {
     flex-grow: 1;
     color: white;
     text-align: center;
+    font-size: 20px;
 }
 
 .new-header .name-wrapper,
@@ -27,6 +30,7 @@
     align-items: center;
     gap: 20px;
     color: white;
+    font-size: 16px;
 }
 
 .new-header input {
@@ -54,4 +58,37 @@
 
 .new-header .button-wrapper .button {
     width: 100%;
+}
+
+@media (max-width: 420px) {
+    .new-header {
+        gap: 4.8vw;
+        padding: 7.1vw;
+    }
+    
+    .new-header .header-menu {
+        padding-bottom: 4.8vw;
+        font-size: 3.8vw;
+    }
+    
+    .new-header .header-menu .header-title {
+        font-size: 4.8vw;
+    }
+    
+    .new-header .name-wrapper,
+    .new-header .description-wrapper {
+        gap: 4.8vw;
+        font-size: 3.8vw;
+    }
+    
+    .new-header input {
+        width: calc(80% - 1.2vw);
+        font-size: 3.8vw;
+        padding: 1.2vw;
+    }
+    
+    .new-header .button-wrapper {
+        gap: 2.4vw;
+        margin-top: 2.4vw;
+    }
 }

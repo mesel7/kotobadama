@@ -20,7 +20,7 @@
     gap: 10px;
     flex-grow: 1;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     padding: 18px 0;
 }
 
@@ -75,11 +75,15 @@
     border-bottom: 1px solid #343434;
 }
 
+.list-item .content-wrapper .word-count {
+    font-size: 16px;
+}
+
 @media (max-width: 420px) {
     .list-item .content-wrapper {
         gap: 2.4vw;
         flex-grow: 1;
-        font-size: 3.8vw;
+        font-size: 3.3vw;
         padding: 4.3vw 0;
     }
 
@@ -91,5 +95,9 @@
     .list-item .content-wrapper .name {
         font-size: 4.8vw;
         padding-bottom: 2.4vw;
+    }
+
+    .list-item .content-wrapper .word-count {
+        font-size: 3.8vw;
     }
 }

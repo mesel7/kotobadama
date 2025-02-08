@@ -39,10 +39,8 @@ const ListItem = ({ id, name, wordCount, createdAt, description, words }) => {
             </div>
             <div className="content-wrapper" onClick={handleVocaListClick}>
                 <div className="name">{name}</div>
-                <div className="word-status">
-                    {`${known} · ${partial} · ${unknown} / `}
-                    <span style={{ fontWeight: "bold" }}>{wordCount}</span>
-                </div>
+                <div className="word-count">{`${wordCount} 단어`}</div>
+                <div className="word-status">{`${known} · ${partial} · ${unknown}`}</div>
                 <div className="progress-bar-container">
                     <div className="progress-bar">
                         <div className="progress-known" style={{ width: `${(known / wordCount) * 100}%` }} />

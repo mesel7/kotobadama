@@ -15,6 +15,7 @@
     color: white;
     justify-content: space-between;
     align-items: center;
+    font-size: 16px;
 }
 
 .voca-header .header-menu .header-title {
@@ -32,5 +33,20 @@
 
 .voca-header .display-option .button {
     width: 30%;
+}
+
+@media (max-width: 420px) {
+    .voca-header {
+        gap: 4.8vw;
+        padding: 7.1vw;
+    }
+
+    .voca-header .header-menu {
+        font-size: 3.8vw;
+    }
+
+    .voca-header .header-menu .header-title {
+        font-size: 4.8vw;
+    }
 }
 

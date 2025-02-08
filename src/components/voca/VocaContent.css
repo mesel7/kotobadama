@@ -53,4 +53,26 @@
     width: 30%;
 }
 
+@media (max-width: 420px) {
+    .voca-content {
+        padding: 7.1vw;
+        gap: 7.1vw;
+    }
 
+    .voca-content .word-wrapper .word-kana,
+    .voca-content .word-wrapper .meaning {
+        font-size: 7.6vw;
+        height: 11.4vw;
+        line-height: 11.4vw;
+    }
+
+    .voca-content .word-wrapper .word-kanji {
+        font-size: 15.2vw;
+        height: 22.9vw;
+        line-height: 22.9vw;
+    }
+
+    .voca-content .menu-wrapper .button-wrapper {
+        gap: 2.4vw;
+    }
+}

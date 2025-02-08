@@ -18,6 +18,7 @@
 .new-content .no-more-fields {
     color: white;
     text-align: center;
+    font-size: 16px;
 }
 
 @media (max-width: 420px) {
@@ -27,6 +28,10 @@
     }
 
     .new-content .input-sample {
+        font-size: 3.8vw;
+    }
+
+    .new-content .no-more-fields {
         font-size: 3.8vw;
     }
 }

@@ -12,9 +12,26 @@
     color: white;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 16px;
 }
 
 .edit-content .no-more-fields {
     color: white;
     text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 420px) {
+    .edit-content {
+        padding: 7.1vw;
+        gap: 7.1vw;
+    }
+
+    .edit-content .input-sample {
+        font-size: 3.8vw;
+    }
+
+    .edit-content .no-more-fields {
+        font-size: 3.8vw;
+    }
 }

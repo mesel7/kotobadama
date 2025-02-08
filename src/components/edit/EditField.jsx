@@ -17,7 +17,7 @@ const EditField = ({ count, data, onChange }) => {
             <input type={"text"} value={data.meaning} onChange={(e) => onChange("meaning", e.target.value)} />
             <FontAwesomeIcon
                 icon={icons.faEraser}
-                style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
+                style={{ color: "white", cursor: "pointer" }}
                 onClick={handleClear}
             />
         </div>

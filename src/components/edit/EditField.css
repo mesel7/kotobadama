@@ -3,6 +3,7 @@
     align-items: flex-end;
     gap: 10px;
     color: white;
+    font-size: 16px;
 }
 
 .edit-field .count {
@@ -13,12 +14,12 @@
 .edit-field input {
     font-family: "Nanum Gothic", "Noto Sans JP", serif;
     font-weight: 300;
+    font-size: 16px;
     display: inline-block;
     box-sizing: border-box;
     width: calc(30% - 5px);
     background: #171717;
     color: white;
-    font-size: 16px;
     padding: 5px;
     border: none;
     border-bottom: 1px solid #343434;
@@ -27,4 +28,22 @@
 
 .edit-field input:focus {
     outline: none;
+}
+
+@media (max-width: 420px) {
+    .edit-field {
+        gap: 2.4vw;
+        font-size: 3.8vw;
+    }
+    
+    .edit-field .count {
+        width: calc(10% - 1.2vw);
+        padding: 1.2vw 0;
+    }
+    
+    .edit-field input {
+        width: calc(30% - 1.2vw);
+        padding: 1.2vw;
+        font-size: 3.8vw;
+    }
 }

@@ -12,13 +12,16 @@
 
 .edit-header .header-menu {
     display: flex;
+    align-items: center;
     padding-bottom: 20px;
+    font-size: 16px;
 }
 
 .edit-header .header-menu .header-title {
     flex-grow: 1;
     color: white;
     text-align: center;
+    font-size: 20px;
 }
 
 .edit-header .name-wrapper,
@@ -27,15 +30,18 @@
     align-items: center;
     gap: 20px;
     color: white;
+    font-size: 16px;
 }
 
 .edit-header input {
+    font-family: "Nanum Gothic", "Noto Sans JP", serif;
+    font-weight: 300;
+    font-size: 16px;
     display: inline-block;
     box-sizing: border-box;
     width: calc(80% - 5px);
     background: #171717;
     color: white;
-    font-size: 16px;
     padding: 5px;
     border: none;
     border-bottom: 1px solid #343434;
@@ -54,4 +60,37 @@
 
 .edit-header .button-wrapper .button {
     width: 50%;
+}
+
+@media (max-width: 420px) {
+    .edit-header {
+        gap: 4.8vw;
+        padding: 7.1vw;
+    }
+    
+    .edit-header .header-menu {
+        padding-bottom: 4.8vw;
+        font-size: 3.8vw;
+    }
+    
+    .edit-header .header-menu .header-title {
+        font-size: 4.8vw;
+    }
+    
+    .edit-header .name-wrapper,
+    .edit-header .description-wrapper {
+        gap: 4.8vw;
+        font-size: 3.8vw;
+    }
+    
+    .edit-header input {
+        width: calc(80% - 1.2vw);
+        font-size: 3.8vw;
+        padding: 1.2vw;
+    }
+    
+    .edit-header .button-wrapper {
+        gap: 2.4vw;
+        margin-top: 2.4vw;
+    }
 }

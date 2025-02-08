@@ -33,8 +33,9 @@ const EditHeader = ({ name, description, onNameChange, onDescriptionChange, onUp
         <div className="edit-header">
             <div className="header-menu">
                 <FontAwesomeIcon
+                    className="prev-button"
                     icon={icons.faAngleLeft}
-                    style={{ color: "white", cursor: "pointer" }}
+                    style={{ color: "white", cursor: "pointer", fontSize: "24px" }}
                     onClick={handleExit}
                 />
                 <div className="header-title">
@@ -50,8 +51,8 @@ const EditHeader = ({ name, description, onNameChange, onDescriptionChange, onUp
                 <input type={"text"} value={description} onChange={onDescriptionChange} />
             </div>
             <div className="button-wrapper">
-                <Button text={"저장"} onClick={onUpdateVoca} />
-                <Button text={"삭제"} onClick={onDeleteVoca} />
+                <Button text={"저장"} type={"default"} onClick={onUpdateVoca} />
+                <Button text={"삭제"} type={"light"} onClick={onDeleteVoca} />
             </div>
         </div>
     );

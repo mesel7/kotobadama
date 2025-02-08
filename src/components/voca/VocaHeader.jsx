@@ -8,8 +8,9 @@ const VocaHeader = ({ vocaName, currentIdx, wordCount, displayOption, onClickDis
         <div className="voca-header">
             <div className="header-menu">
                 <FontAwesomeIcon
+                    className="prev-button"
                     icon={icons.faAngleLeft}
-                    style={{ color: "white", cursor: "pointer" }}
+                    style={{ color: "white", cursor: "pointer", fontSize: "24px" }}
                     onClick={onSaveAndExit}
                 />
                 <div className="header-title">{vocaName}</div>

@@ -8,7 +8,7 @@ const ListContent = ({ vocaList }) => {
 
     return (
         <div className="list-content">
-            <Button text={"+ 단어장 추가"} onClick={() => navigate("/new")}/>
+            <Button text={"단어장 추가"} type={"default"} onClick={() => navigate("/new")}/>
             {vocaList.map((it, idx) => 
                 <ListItem key={idx} {...it} />
             )}

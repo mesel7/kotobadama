@@ -34,25 +34,38 @@
 
 .swal2-confirm {
     font-family: "Nanum Gothic", "Noto Sans JP", serif;
-    background-color: black;
+    background: linear-gradient(135deg, #b3e0fc -0.69%, #6b97b3 99.31%);
     color: white;
-    border-radius: 5px;
+    border-radius: 9999px;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 2px;
-    padding: 8px 12px;
+    padding: 10px 15px;
 }
 
 .swal2-cancel {
     font-family: "Nanum Gothic", "Noto Sans JP", serif;
-    background-color: white;
-    color: black;
-    border: 1px solid #ececec;
-    border-radius: 5px;
+    background: #171717;
+    color: #b3e0fc;
+    outline: 1px solid #b3e0fc;
+    border-radius: 9999px;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 2px;
-    padding: 8px 12px;
+    padding: 10px 15px;
+}
+
+.swal2-confirm:hover,
+.swal2-confirm:focus,
+.swal2-confirm:active {
+    background: linear-gradient(135deg, #9cc8e3 -0.69%, #5a8199 99.31%) !important;
+}
+
+.swal2-cancel:hover,
+.swal2-cancel:focus,
+.swal2-cancel:active {
+    background: #1e1e1e !important;
+    outline: 1px solid #b3e0fc !important;
 }
 
 @media(max-width: 420px) {
@@ -78,11 +91,11 @@
     
     .swal2-confirm {
         font-size: 3.8vw;
-        padding: 1.9vw 2.9vw;
+        padding: 2.4vw 3.6vw;
     }
     
     .swal2-cancel {
         font-size: 3.8vw;
-        padding: 1.9vw 2.9vw;
+        padding: 2.4vw 3.6vw;
     }
 }

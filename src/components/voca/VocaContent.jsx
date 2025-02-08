@@ -91,8 +91,9 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
             </div>
             <div className="menu-wrapper">
                 <FontAwesomeIcon
+                    className="prev-word"
                     icon={icons.faAngleLeft}
-                    style={{ color: "white", cursor: "pointer", padding: "15px", paddingLeft: "0px" }}
+                    style={{ color: "white", cursor: "pointer", fontSize: "24px", padding: "15px", paddingLeft: "0px" }}
                     onClick={handlePrevClick}
                 />
                 <div className="button-wrapper">
@@ -113,8 +114,9 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
                     />
                 </div>
                 <FontAwesomeIcon
+                    className="next-word"
                     icon={icons.faAngleRight}
-                    style={{ color: "white", cursor: "pointer", padding: "15px", paddingRight: "0px" }}
+                    style={{ color: "white", cursor: "pointer", fontSize: "24px", padding: "15px", paddingRight: "0px" }}
                     onClick={handleNextClick}
                 />
             </div>

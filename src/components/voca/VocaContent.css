@@ -72,6 +72,11 @@
         line-height: 22.9vw;
     }
 
+    .voca-content .menu-wrapper .prev-word,
+    .voca-content .menu-wrapper .next-word {
+        font-size: 5.7vw !important;
+    }
+
     .voca-content .menu-wrapper .button-wrapper {
         gap: 2.4vw;
     }

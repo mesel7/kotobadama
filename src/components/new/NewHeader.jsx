@@ -33,8 +33,9 @@ const NewHeader = ({ name, description, onNameChange, onDescriptionChange, onCre
         <div className="new-header">
             <div className="header-menu">
                 <FontAwesomeIcon
+                    className="prev-button"
                     icon={icons.faAngleLeft}
-                    style={{ color: "white", cursor: "pointer" }}
+                    style={{ color: "white", cursor: "pointer", fontSize: "24px" }}
                     onClick={handleExit}
                 />
                 <div className="header-title">
@@ -50,7 +51,7 @@ const NewHeader = ({ name, description, onNameChange, onDescriptionChange, onCre
                 <input type={"text"} value={description} onChange={onDescriptionChange}/>
             </div>
             <div className="button-wrapper">
-                <Button text={"저장"} onClick={onCreateNewVoca}/>
+                <Button text={"저장"} type={"default"} onClick={onCreateNewVoca}/>
             </div>
         </div>
     );

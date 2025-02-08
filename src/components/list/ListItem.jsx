@@ -40,7 +40,8 @@ const ListItem = ({ id, name, wordCount, createdAt, description, words }) => {
             <div className="content-wrapper" onClick={handleVocaListClick}>
                 <div className="name">{name}</div>
                 <div className="word-status">
-                    {`${known} | ${partial} | ${unknown} 🔹 ${wordCount}`}
+                    {`${known} · ${partial} · ${unknown} / `}
+                    <span style={{ fontWeight: "bold" }}>{wordCount}</span>
                 </div>
                 <div className="progress-bar-container">
                     <div className="progress-bar">

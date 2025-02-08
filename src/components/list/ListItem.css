@@ -1,7 +1,7 @@
 .list-item {
     display: flex;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px 1px #6b97b3;
+    border: 1px solid #6b97b3;
 }
 
 .list-item .img-wrapper {
@@ -26,7 +26,7 @@
 
 .list-item .content-wrapper .progress-bar-container {
     display: flex;
-    height: 5%;
+    height: 1.5%;
     width: 100%;
     background-color: black;
 }
@@ -58,6 +58,7 @@
 .list-item .content-wrapper .word-status,
 .list-item .content-wrapper .created-at,
 .list-item .content-wrapper .description {
+    color: #ccc;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -67,8 +68,11 @@
 }
 
 .list-item .content-wrapper .name {
+    color: white;
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #343434;
 }
 
 @media (max-width: 420px) {
@@ -86,5 +90,6 @@
 
     .list-item .content-wrapper .name {
         font-size: 4.8vw;
+        padding-bottom: 2.4vw;
     }
 }

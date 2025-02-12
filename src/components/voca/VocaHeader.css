@@ -31,11 +31,22 @@
 
 .voca-header .display-option {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.voca-header .display-option .toggle-button, 
+.voca-header .display-option .filter-button {
+    display: flex;
     justify-content: space-between;
 }
 
-.voca-header .display-option .button {
+.voca-header .display-option .toggle-button button {
     width: 30%;
+}
+
+.voca-header .display-option .filter-button button {
+    width: 48%;
 }
 
 @media (max-width: 420px) {

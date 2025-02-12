@@ -5,7 +5,7 @@ import { icons } from "../../utils";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 
-const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption, onStatusChange }) => {
+const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption, filterOption, onChangeFilterOption, onStatusChange }) => {
     /*
     useEffect(() => {
         const askStartPosition = async () => {
@@ -37,19 +37,105 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
     }, []);
     */
 
+    // filter(모르는 단어만, 모든 단어)에 따라 단어 인덱스 조정 등 필요한 처리
+    useEffect(() => {
+        if (filterOption) {
+            const allKnown = words.every(word => word.status === "known");
+            if (allKnown) {
+                Swal.fire({
+                    title: "알림",
+                    text: "모르는 단어가 없어서 모든 단어를 표시합니다",
+                    icon: "info",
+                    confirmButtonText: "확인",
+                    customClass: {
+                        confirmButton: 'no-focus-outline',
+                    },
+                });
+
+                onChangeFilterOption(false);
+            } else {
+                // 모르는 단어가 1개 이상 있을 때
+                if (words[currentIdx]?.status === "known") {
+                    const nextIdx = words.findIndex((word, idx) => idx > currentIdx && word.status !== "known");
+                    if (nextIdx !== -1) {
+                        onChangeIdx(nextIdx);
+                    }
+                }
+            }
+        }
+    }, [filterOption]);
+
+    // 현재 인덱스로부터 뒤로 출발해서 가장 가까운 모르는 단어의 인덱스로 이동
+    const findPrevUnknownIdx = (startIdx) => {
+        for (let i = startIdx - 1; i >= -startIdx - 1; i--) {
+            const idx = (i + wordCount) % wordCount; // 음수 인덱스 처리
+            if (words[idx].status !== "known") {
+                return idx;
+            }
+        }
+        return -1;
+    };
+
+    // 현재 인덱스로부터 앞으로 출발해서 가장 가까운 모르는 단어의 인덱스로 이동
+    const findNextUnknownIdx = (startIdx) => {
+        for (let i = startIdx + 1; i < wordCount + startIdx + 1; i++) {
+            const idx = i % wordCount;
+            if (words[idx].status !== "known") {
+                return idx;
+            }
+        }
+        return -1;
+    };
+
     const handlePrevClick = () => {
-        if (currentIdx <= 0) {
-            onChangeIdx(wordCount - 1);
+        if (filterOption) {
+            const prevIdx = findPrevUnknownIdx(currentIdx);
+            if (prevIdx !== -1) {
+                onChangeIdx(prevIdx);
+            } else {
+                Swal.fire({
+                    title: "알림",
+                    text: "모르는 단어가 없어서 모든 단어를 표시합니다",
+                    icon: "info",
+                    confirmButtonText: "확인",
+                    customClass: {
+                        confirmButton: 'no-focus-outline',
+                    },
+                });
+                onChangeFilterOption(false);
+            }
         } else {
-            onChangeIdx(prev => prev - 1);
+            if (currentIdx <= 0) {
+                onChangeIdx(wordCount - 1);
+            } else {
+                onChangeIdx(prev => prev - 1);
+            }
         }
     };
 
     const handleNextClick = () => {
-        if (currentIdx >= wordCount - 1) {
-            onChangeIdx(0);
+        if (filterOption) {
+            const nextIdx = findNextUnknownIdx(currentIdx);
+            if (nextIdx !== -1) {
+                onChangeIdx(nextIdx);
+            } else {
+                Swal.fire({
+                    title: "알림",
+                    text: "모르는 단어가 없어서 모든 단어를 표시합니다",
+                    icon: "info",
+                    confirmButtonText: "확인",
+                    customClass: {
+                        confirmButton: 'no-focus-outline',
+                    },
+                });
+                onChangeFilterOption(false);
+            }
         } else {
-            onChangeIdx(prev => prev + 1);
+            if (currentIdx >= wordCount - 1) {
+                onChangeIdx(0);
+            } else {
+                onChangeIdx(prev => prev + 1);
+            }
         }
     };
 

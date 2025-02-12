@@ -22,6 +22,9 @@ const Voca = () => {
     // 개별 단어 페이지에서 한자, 가나, 뜻의 표시 여부를 관리
     const [displayOption, setDisplayOption] = useState({});
 
+    // 개별 단어 페이지에서 모르는 단어만 표시, 모든 단어 표시 여부를 관리
+    const [filter, setFilter] = useState(true);
+
     // 현재 보고 있는 단어의 인덱스 번호를 관리
     const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -109,6 +112,8 @@ const Voca = () => {
                     wordCount={voca.wordCount}
                     displayOption={displayOption}
                     onClickDisplayOption={handleDisplayOption}
+                    filterOption={filter}
+                    onClickFilterOption={setFilter}
                     onSaveAndExit={handleSaveAndExit}
                 />
                 <VocaContent
@@ -117,6 +122,8 @@ const Voca = () => {
                     currentIdx={currentIdx}
                     onChangeIdx={setCurrentIdx}
                     displayOption={displayOption}
+                    filterOption={filter}
+                    onChangeFilterOption={setFilter}
                     onStatusChange={handleStatusChange}
                 />
             </div>

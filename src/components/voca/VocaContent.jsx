@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption, onStatusChange }) => {
+    /*
     useEffect(() => {
         const askStartPosition = async () => {
             const result = await Swal.fire({
@@ -33,37 +34,22 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
         if (currentIdx !== 0) {
             askStartPosition();
         }
-    }, []);    
+    }, []);
+    */
 
     const handlePrevClick = () => {
-        if (currentIdx > 0) {
-            onChangeIdx(prev => prev - 1);
+        if (currentIdx <= 0) {
+            onChangeIdx(wordCount - 1);
         } else {
-            Swal.fire({
-                title: "첫 번째 단어",
-                text: "첫 번째 단어입니다",
-                icon: "info",
-                confirmButtonText: "확인",
-                customClass: {
-                    confirmButton: 'no-focus-outline'
-                }
-            });
+            onChangeIdx(prev => prev - 1);
         }
     };
 
     const handleNextClick = () => {
-        if (currentIdx < wordCount - 1) {
-            onChangeIdx(prev => prev + 1);
+        if (currentIdx >= wordCount - 1) {
+            onChangeIdx(0);
         } else {
-            Swal.fire({
-                title: "마지막 단어",
-                text: "마지막 단어입니다",
-                icon: "info",
-                confirmButtonText: "확인",
-                customClass: {
-                    confirmButton: 'no-focus-outline'
-                }
-            });
+            onChangeIdx(prev => prev + 1);
         }
     };
 

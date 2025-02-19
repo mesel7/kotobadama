@@ -49,6 +49,9 @@
 }
 
 .list-item .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     font-size: 24px;
     color: white;
     padding: 15px;
@@ -88,6 +91,7 @@
     }
 
     .list-item .menu-wrapper {
+        gap: 2.4vw;
         font-size: 5.7vw;
         padding: 3.6vw;
     }

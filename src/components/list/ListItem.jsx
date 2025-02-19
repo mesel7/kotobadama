@@ -3,9 +3,11 @@ import vocaImg from "../../assets/images/img_voca.png";
 import { formatDate, icons } from "../../utils";
 import "./ListItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useSaveVoca from "../../hooks/useSaveVoca";
 
 const ListItem = ({ id, name, wordCount, createdAt, description, words }) => {
     const navigate = useNavigate();
+    const { saveVocaToFile } = useSaveVoca();
 
     const handleVocaListClick = () => {
         navigate(`/voca/${id}`);
@@ -13,6 +15,11 @@ const ListItem = ({ id, name, wordCount, createdAt, description, words }) => {
 
     const handleVocaEditClick = () => {
         navigate(`/edit/${id}`);
+    };
+
+    const handleVocaSaveClick = (e) => {
+        e.stopPropagation();
+        saveVocaToFile(id);
     };
 
     const getWordStatus = () => {
@@ -56,6 +63,11 @@ const ListItem = ({ id, name, wordCount, createdAt, description, words }) => {
                     icon={icons.faPenToSquare}
                     style={{ cursor: "pointer", color: "#b3e0fc" }}
                     onClick={handleVocaEditClick}
+                />
+                <FontAwesomeIcon
+                    icon={icons.faDownload}
+                    style={{ cursor: "pointer", color: "#b3e0fc" }}
+                    onClick={handleVocaSaveClick}
                 />
             </div>
         </div>

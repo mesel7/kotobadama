@@ -4,6 +4,7 @@ import { VocaDispatchContext, VocaStateContext } from "../contexts/VocaContext";
 import Swal from "sweetalert2";
 import VocaHeader from "../components/voca/VocaHeader";
 import VocaContent from "../components/voca/VocaContent";
+import VocaBottom from "../components/voca/VocaBottom";
 
 const Voca = () => {
     const state = useContext(VocaStateContext);
@@ -125,6 +126,10 @@ const Voca = () => {
                     filterOption={filter}
                     onChangeFilterOption={setFilter}
                     onStatusChange={handleStatusChange}
+                />
+                <VocaBottom
+                    displayOption={displayOption}
+                    onClickDisplayOption={handleDisplayOption}
                 />
             </div>
         );

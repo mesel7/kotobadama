@@ -1,0 +1,23 @@
+.voca-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0 20px;
+    padding: 30px;
+    border-top: 1px solid #232323;
+}
+
+.voca-bottom .toggle-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.voca-bottom .toggle-button .button {
+    width: 30%;
+}
+
+@media (max-width: 420px) {
+    .voca-bottom {
+        gap: 4.8vw;
+        padding: 7.1vw;
+    }
+}

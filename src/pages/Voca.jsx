@@ -21,7 +21,11 @@ const Voca = () => {
     const [localWords, setLocalWords] = useState([]);
 
     // 개별 단어 페이지에서 한자, 가나, 뜻의 표시 여부를 관리
-    const [displayOption, setDisplayOption] = useState({});
+    const [displayOption, setDisplayOption] = useState({
+        wordKanji: true,
+        wordKana: false,
+        meaning: false
+    });
 
     // 개별 단어 페이지에서 모르는 단어만 표시, 모든 단어 표시 여부를 관리
     const [filter, setFilter] = useState(true);
@@ -38,11 +42,6 @@ const Voca = () => {
         if (vocaData) {
             setVoca(vocaData);
             setLocalWords(vocaData.words);
-            setDisplayOption({
-                wordKanji: false,
-                wordKana: true,
-                meaning: false
-            });
             setCurrentIdx(vocaData.currentIdx);
             setIsDataLoaded(true);
         } else {
@@ -123,6 +122,7 @@ const Voca = () => {
                     currentIdx={currentIdx}
                     onChangeIdx={setCurrentIdx}
                     displayOption={displayOption}
+                    setDisplayOption={setDisplayOption}
                     filterOption={filter}
                     onChangeFilterOption={setFilter}
                     onStatusChange={handleStatusChange}

@@ -5,7 +5,7 @@ import { icons } from "../../utils";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 
-const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption, filterOption, onChangeFilterOption, onStatusChange }) => {
+const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption, setDisplayOption, filterOption, onChangeFilterOption, onStatusChange }) => {
     /*
     useEffect(() => {
         const askStartPosition = async () => {
@@ -65,6 +65,19 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
         }
     }, [filterOption]);
 
+    // 현재 단어에 한자가 비어있을 경우 한자 미표시, 가나 표시로 전환
+    useEffect(() => {
+        if (!words[currentIdx]?.wordKanji.trim()) {
+            setDisplayOption((prev) => {
+                return {
+                    ...prev,
+                    wordKanji: false,
+                    wordKana: true
+                };
+            });
+        }
+    }, [currentIdx])
+
     // 현재 인덱스로부터 뒤로 출발해서 가장 가까운 모르는 단어의 인덱스로 이동
     const findPrevUnknownIdx = (startIdx) => {
         for (let i = startIdx - 1; i >= -startIdx - 1; i--) {
@@ -111,6 +124,12 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
                 onChangeIdx(prev => prev - 1);
             }
         }
+
+        setDisplayOption({
+            wordKanji: true,
+            wordKana: false,
+            meaning: false
+        });
     };
 
     const handleNextClick = () => {
@@ -137,6 +156,12 @@ const VocaContent = ({ words, wordCount, currentIdx, onChangeIdx, displayOption,
                 onChangeIdx(prev => prev + 1);
             }
         }
+
+        setDisplayOption({
+            wordKanji: true,
+            wordKana: false,
+            meaning: false
+        });
     };
 
     return (
